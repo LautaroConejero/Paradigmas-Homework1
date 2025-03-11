@@ -1,0 +1,10 @@
+[ERROR] <Luca>
+[CRITICAL] <LOLO>
+[ERROR] <Luca>
+[WARNING] <Luca>
+[ERROR] <Luca>
+[] <2>
+[ERROR] <HOla>
+[] <3>
+[] <>
+[WARNING] <lauti>

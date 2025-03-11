@@ -1,14 +1,16 @@
 #include <iostream>
 #include <vector>
-#include "matrices.hpp"
+#include "matrices.h"
 using namespace std;
 
 vector <vector<int>> CrearMatriz(int Numero) {
-    vector<vector<int>> Matriz(Numero, vector<int>(Numero));
+    vector <vector<int>> Matriz;
     int value = 1;
     for (int i = 0; i < Numero; i++) {
+        vector<int> columna;
+        Matriz.push_back(columna);
         for (int j = 0; j < Numero; j++) {
-            Matriz[i][j] = value;
+            Matriz[i].push_back(value);
             value++;
         }
     }
