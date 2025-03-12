@@ -14,7 +14,7 @@ void logMessage(string mensaje, int NivelSeveridad){
 
 void logMessage(string mensaje, string Usuario){
     ofstream Log ("Log.txt", ios::app);
-    Log << "[Security] <" <<Usuario <<">" << mensaje << endl;
+    Log << "[Security] <" <<Usuario <<"> " << mensaje << endl;
     Log.close();
 }
 
