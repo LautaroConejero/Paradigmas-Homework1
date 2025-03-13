@@ -22,3 +22,4 @@ void erase(shared_ptr<List>& list, int position);
 void print_list(shared_ptr<List>& list);
 void clear_list(shared_ptr<List>& list);
 size_t size(shared_ptr<List>& list);
+void correr_lista();

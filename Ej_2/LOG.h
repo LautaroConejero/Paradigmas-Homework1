@@ -11,3 +11,5 @@ void logMessage(string mensaje, int NivelSeveridad);
 void logMessage(string Mensage_de_Error, string Archivo, int Linea_de_Codigo);
 
 void logMessage(string Mensaje_De_Acceso, string Nombre_de_Usuario);
+
+int correr_log();

@@ -6,3 +6,5 @@ using namespace std;
 vector<vector<int>> CrearMatriz(int Numero);
 
 void ImprimirMatriz(vector<vector<int>> matriz, int Numero);
+
+void correr_matriz();

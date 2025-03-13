@@ -23,3 +23,12 @@ void ImprimirMatriz(vector<vector<int>> matriz, int Numero) {
         cout <<"Matriz[" << i/Numero <<"][" << i%Numero << "] = " << matriz[i/Numero][i%Numero] << "\n";
     }
 }
+
+void correr_matriz(){
+    cout << "Ingrese el tamaño de la matriz: ";
+    int Numero;
+    cin >> Numero;
+    vector<vector<int>> Matriz = CrearMatriz(Numero);
+    ImprimirMatriz(Matriz, Numero);
+    return;
+}
