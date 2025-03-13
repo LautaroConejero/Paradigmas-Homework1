@@ -112,7 +112,7 @@ void clear_list(shared_ptr<List>& list){
 }
 
 void correr_lista(){
-    int Decision;
+    int Decision = 0;
     shared_ptr<List> Lista = create_list();
     while (Decision != 9){
         cout<< "Que desea hacer con la lista" << endl;
@@ -174,7 +174,6 @@ void correr_lista(){
                 if (size(Lista) != 0){
                     clear_list(Lista);
                 }
-                Lista = create_list();
                 break;
             }
             case 9:{
