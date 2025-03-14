@@ -4,3 +4,4 @@
 [ERROR] <Division by zero error> Archivo: Ej_2/LOG.cpp Linea: 63
 [ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 61
 [ERROR] <El mensaje de acceso no puede estar vacio> Archivo: Ej_2/LOG.cpp Linea: 81
+[WARNING] <hola>

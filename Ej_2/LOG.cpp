@@ -45,36 +45,35 @@ using namespace std;
             if (valor <0 || valor > 6){
                 throw runtime_error("El valor ingresado no es valido");
             }
-
-            while (valor < 0 || valor > 6) {
-                cout << "Ingrese un valor valido: ";
-                cin >> valor;
-            }
-
-            if (valor >= 0 && valor <= 4){
-                string Mensaje;
-                cin.ignore();
-                cout << "Ingrese el mensaje: ";
-                getline(cin, Mensaje);
-                logMessage(Mensaje, valor);
-            }
-            else if (valor == 5){
-                string Usuario;
-                cout << "Ingrese el nombre de usuario: ";
-                cin >> Usuario;
-                if (Usuario == ""){
-                    throw runtime_error("El nombre de usuario no puede estar vacio");
-                    return 0;
+            switch (valor){
+                case 5:{
+                    string Usuario;
+                    cout << "Ingrese el nombre de usuario: ";
+                    cin >> Usuario;
+                    if (Usuario == ""){
+                        throw runtime_error("El nombre de usuario no puede estar vacio");
+                        return 0;
+                    }
+                    string Mensaje_acc;
+                    cout << "Ingrese el mensaje de acceso: ";
+                    cin.ignore();
+                    getline(cin, Mensaje_acc);
+                    if (Mensaje_acc == ""){
+                        throw runtime_error("El mensaje de acceso no puede estar vacio");
+                        return 0;
+                    }
+                    logMessage(Mensaje_acc, Usuario);
                 }
-                string Mensaje_acc;
-                cout << "Ingrese el mensaje de acceso: ";
-                cin.ignore();
-                getline(cin, Mensaje_acc);
-                if (Mensaje_acc == ""){
-                    throw runtime_error("El mensaje de acceso no puede estar vacio");
-                    return 0;
+                case 6:{
+
                 }
-                logMessage(Mensaje_acc, Usuario);
+                default:{
+                    string Mensaje;
+                    cin.ignore();
+                    cout << "Ingrese el mensaje: ";
+                    getline(cin, Mensaje);
+                    logMessage(Mensaje, valor);
+                }
             }
         }
         catch (const exception& e){
