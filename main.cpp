@@ -10,12 +10,15 @@ using namespace std;
 
 int main(){
     cout << "Ejercicio 1 [1] \nEjercicio 2 [2] \nEjercicio 3 [3] \nEjercicio 4 [4] \nSalir [5]\n";
+    cout << "Ingrese el ejercicio que desea correr: ";
     int Ejercicio;
     cin >> Ejercicio;
     while (Ejercicio < 1 || Ejercicio > 5){
-        cout << "Ingrese un valido: " << endl;
+        cout << endl;
+        cout << "Ingrese un valor valido: ";
         cin >> Ejercicio;
     }
+    cout << endl;
     switch (Ejercicio){
         case 1:{
             correr_matriz();

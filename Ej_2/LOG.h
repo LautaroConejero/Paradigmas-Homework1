@@ -1,12 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 
 using namespace std;
-vector<string> Nivel= {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"};
+enum NivelSeveridad {
+    DEBUG,
+    INFO,
+    WARNING,
+    ERROR,
+    CRITICAL,
+};
+string nivelToString(NivelSeveridad nivel);
 
-void logMessage(string mensaje, int NivelSeveridad);
+void logMessage(string mensaje, NivelSeveridad NivelSeveridad);
 
 void logMessage(string Mensage_de_Error, string Archivo, int Linea_de_Codigo);
 

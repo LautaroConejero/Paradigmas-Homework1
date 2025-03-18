@@ -28,6 +28,11 @@ void correr_matriz(){
     cout << "Ingrese el tamaño de la matriz: ";
     int Numero;
     cin >> Numero;
+    while (Numero <= 0 or Numero != int(Numero)){
+        cout << "Ingrese un valor valido" << endl;
+        cout << "Valor: ";
+        cin >> Numero;
+    }
     vector<vector<int>> Matriz = CrearMatriz(Numero);
     ImprimirMatriz(Matriz, Numero);
     return;

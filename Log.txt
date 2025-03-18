@@ -5,3 +5,12 @@
 [ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 61
 [ERROR] <El mensaje de acceso no puede estar vacio> Archivo: Ej_2/LOG.cpp Linea: 81
 [WARNING] <hola>
+[] <hola>
+[ERROR] <HOLA>
+[] <as>
+[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
+[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
+[DEBUG] <>
+[DEBUG] <>
+[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
+[DEBUG] <hola>

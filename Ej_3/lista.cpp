@@ -124,7 +124,6 @@ void correr_lista(){
     int Decision = 0;
     shared_ptr<List> Lista = create_list();
     while (Decision != 9){
-        cout<< "Que desea hacer con la lista" << endl;
         cout<< "Insertar al inicio [1]" << endl;
         cout<< "Insertar al final [2]" << endl;
         cout<< "Insertar en una posicion deseada [3]" << endl;
@@ -134,6 +133,7 @@ void correr_lista(){
         cout<< "Imprimir el tamaño de la lista [7]" << endl;
         cout<< "Crear una nueva lista [8]" << endl;
         cout<< "Salir [9]" << endl;
+        cout<< "Que desea hacer con la lista: ";
         cin >> Decision;
         switch (Decision){
             case 1:{
