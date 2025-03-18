@@ -1,8 +1,4 @@
-#include <iostream>
-#include <string>
 #include "lista.hpp"
-#include <memory>
-using namespace std;
 
 shared_ptr<Node> create_node(int value){
     shared_ptr<Node> new_node = make_shared<Node>();

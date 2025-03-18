@@ -1,12 +1,7 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <memory>
 #include "Ej_1/matrices.cpp"
 #include "Ej_2/LOG.cpp"
 #include "Ej_3/lista.cpp"
 #include "Ej_4/Recu.cpp"
-using namespace std;
 
 int main(){
     cout << "Ejercicio 1 [1] \nEjercicio 2 [2] \nEjercicio 3 [3] \nEjercicio 4 [4] \nSalir [5]\n";

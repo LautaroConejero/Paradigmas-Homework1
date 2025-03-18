@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
 #include "matrices.h"
-using namespace std;
-
 vector <vector<int>> CrearMatriz(int Numero) {
     vector <vector<int>> Matriz;
     int value = 1;

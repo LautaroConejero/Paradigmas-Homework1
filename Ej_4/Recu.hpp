@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <chrono>
 using namespace std;
 
 bool comp_recu_char(char* variable1, char* variable2);

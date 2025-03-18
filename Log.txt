@@ -14,3 +14,7 @@
 [DEBUG] <>
 [ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
 [DEBUG] <hola>
+[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 84
+[Security] <Hola> no
+[UNKNOWN] <uit>
+[Security] <hola> no

@@ -1,9 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "LOG.h"
-#include <vector>
-using namespace std;
 
 string nivelToString(NivelSeveridad nivel){
     switch (nivel) {
@@ -74,6 +69,7 @@ int correr_log(){
                     return 0;
                 }
                 logMessage(Mensaje_acc, Usuario);
+                return 0;
             }
             default:{
                 string Mensaje;

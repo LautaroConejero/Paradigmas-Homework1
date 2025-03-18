@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
+
 enum NivelSeveridad {
     DEBUG,
     INFO,
