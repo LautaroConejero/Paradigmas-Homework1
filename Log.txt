@@ -18,3 +18,4 @@
 [Security] <Hola> no
 [UNKNOWN] <uit>
 [Security] <hola> no
+[WARNING] <gogog>
