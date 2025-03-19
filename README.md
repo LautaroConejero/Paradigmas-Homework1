@@ -24,12 +24,13 @@ Primero JUSTIFICO que uso char* en vez de string, porque habiendo probado/invest
 
 Ahora para comparar el tiempo de ejecucion y compilacion tube un lindo quilombo.
 Que pasa, con mi computadora enchufada (es una laptop), y sin aplicacion abiertas en segundo plano, cuando hago literalmente esto:
+                
                 auto start = chrono::high_resolution_clock::now();
 
                 auto end = chrono::high_resolution_clock::now();
 
                 auto ElapsedTime = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
-                
+
 El valor de ElapsedTime decide ser LITERALMENTE aproximademnte 170000 nanosegundos. Me esta tardando, porque si ese tiempo de base.
 Okey, entonces a base de repetir esa misma cuentita y el valor de ElapsedTime sumarlo una N cantidad de veces en un valor suma_demas
 que:
