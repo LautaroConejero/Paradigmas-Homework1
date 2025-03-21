@@ -1,5 +1,0 @@
-[Security] <Gonzalo> es trolo
-[ERROR] <El mensaje de acceso no puede estar vacio> Archivo: Ej_2/LOG.cpp Linea: 90
-[Security] <Gonzalo> no entra en el archivo
-[DEBUG] <>
-[DEBUG] <>
