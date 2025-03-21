@@ -2,15 +2,15 @@
 
 // Función para crear un nodo con un valor dado
 shared_ptr<Node> create_node(int value) {
-    shared_ptr<Node> new_node = make_shared<Node>(); // Crear un nuevo nodo
-    new_node->data = value; // Asignar el valor al nodo
+    shared_ptr<Node> new_node = make_shared<Node>(); 
+    new_node->data = value; 
     return new_node; 
 }
 
 // Función para crear una lista vacía
 shared_ptr<List> create_list() {
-    shared_ptr<List> new_list = make_shared<List>(); // Crear una nueva lista
-    new_list->size = 0; // Inicializar el tamaño de la lista a 0
+    shared_ptr<List> new_list = make_shared<List>(); 
+    new_list->size = 0; 
     return new_list; 
 }
 
@@ -21,7 +21,7 @@ size_t size(shared_ptr<List>& list) {
 
 // Función para insertar un valor al inicio de la lista
 void push_front(shared_ptr<List>& list, int value) {
-    shared_ptr<Node> new_node = create_node(value); // Crear un nuevo nodo
+    shared_ptr<Node> new_node = create_node(value); 
     new_node->next = list->head; // Apuntar el nuevo nodo al primer nodo actual
     list->head = new_node; // Actualizar la cabeza de la lista al nuevo nodo
     list->size++; // Incrementar el tamaño de la lista
@@ -30,33 +30,34 @@ void push_front(shared_ptr<List>& list, int value) {
 
 // Función para insertar un valor al final de la lista
 void push_back(shared_ptr<List>& list, int value) {
-    if (!size(list)) { // Si la lista está vacía
-        push_front(list, value); // Insertar al inicio
+    if (!size(list)) { // considero si la lista este vacia, asi reutilizo el codigo de push_front
+        push_front(list, value); 
         return;
     }
-    shared_ptr<Node> temp = list->head; // Apuntar al primer nodo
+    shared_ptr<Node> temp = list->head; // creo un iterador
     while (temp->next != nullptr) { // Recorrer hasta el último nodo
         temp = temp->next;
     }
-    shared_ptr<Node> new_node = create_node(value); // Crear un nuevo nodo
+    shared_ptr<Node> new_node = create_node(value); 
     temp->next = new_node; // Apuntar el último nodo al nuevo nodo
-    list->size++; // Incrementar el tamaño de la lista
+    list->size++; 
     cout << "Se ha insertado el elemento al final" << endl;
 }
 
 // Función para insertar un valor en una posición específica de la lista
 void insert(shared_ptr<List>& list, int value, int position) {
-    if (position >= size(list)) { // Si la posición es mayor o igual al tamaño de la lista
-        push_back(list, value); // Insertar al final
+    if (position >= size(list)) { // Si la posición es mayor o igual al tamaño de la lista lo inserto al final y doy mensaje de aviso
+        push_back(list, value); 
         cout << "Ingresaste una posicion que no existe, se inserto al final" << endl;
         return;
-    } else if (position <= 0) { // Si la posición es menor o igual a 0
-        push_front(list, value); // Insertar al inicio
-        cout << "Ingresaste una posicion que no existe, se inserto al inicio" << endl;
+    }
+    else if (position <= 0) { // Si la posición es menor o igual a 0 lo inserto al principio y doy un mensaje de aviso
+        push_front(list, value); 
+        if (position < 0) cout << "Ingresaste una posicion que no existe, se inserto al inicio" << endl;
         return;
     } else {
-        shared_ptr<Node> new_node = create_node(value); // Crear un nuevo nodo
-        shared_ptr<Node> temp = list->head; // Apuntar al primer nodo
+        shared_ptr<Node> new_node = create_node(value); 
+        shared_ptr<Node> temp = list->head; // iterador
         for (int i = 0; i < position - 1; i++) { // Recorrer hasta la posición anterior
             temp = temp->next;
         }
@@ -65,11 +66,12 @@ void insert(shared_ptr<List>& list, int value, int position) {
         list->size++; 
     cout << "Se ha insertado el elemento en la posicion " << position << endl;
     return;
+    }
 }
 
 // Función para eliminar el primer elemento de la lista
 void pop_front(shared_ptr<List>& list) {
-    if (size(list) == 0) { // Si la lista está vacía
+    if (size(list) == 0) { // Si la lista está vacía, doy un mensaje de aviso
         cout << "La lista esta vacia" << endl;
         return;
     }
@@ -81,17 +83,18 @@ void pop_front(shared_ptr<List>& list) {
 
 // Función para eliminar un elemento en una posición específica de la lista
 void erase(shared_ptr<List>& list, int position) {
-    if (size(list) == 0) { // Si la lista está vacía
+    if (size(list) == 0) { // idem que en pop_front
         cout << "La lista esta vacia" << endl;
         return;
-    } else if (position == 0) { // Si la posición es 0
-        pop_front(list); // Eliminar el primer elemento
+    } else if (position == 0) { // Si la posición es 0, elimino el primer elemento
+        pop_front(list); 
         return;
     }
     if (position >= size(list)) { // Si la posición es mayor o igual al tamaño de la lista
-        position = size(list) - 1; // Ajustar la posición al último elemento
+        position = size(list) - 1; // Eliminar el último elemento, pero doy mensaje de aviso
+        cout << "Ingresaste una posicion que no existe, por lo tanto:"<< endl;
     }
-    shared_ptr<Node> temp = list->head; // Apuntar al primer nodo
+    shared_ptr<Node> temp = list->head; // interador
     for (int i = 0; i < position - 1; i++) { // Recorrer hasta la posición anterior
         temp = temp->next;
     }
@@ -104,13 +107,13 @@ void erase(shared_ptr<List>& list, int position) {
 // Función para imprimir la lista
 void print_list(shared_ptr<List>& list) {
     cout << "Lista: ";
-    shared_ptr<Node> temp = list->head; // Apuntar al primer nodo
+    shared_ptr<Node> temp = list->head; // iterador
     while (temp != nullptr) { // Recorrer la lista
         cout << temp->data; // Imprimir el valor del nodo
         if (temp->next != nullptr) {
             cout << " -> ";
         }
-        temp = temp->next; // Apuntar al siguiente nodo
+        temp = temp->next; 
     }
     cout << endl;
     return;

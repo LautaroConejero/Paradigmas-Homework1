@@ -14,9 +14,9 @@ string nivelToString(NivelSeveridad nivel) {
 
 // Función para registrar un mensaje con un nivel de severidad
 void logMessage(string mensaje, NivelSeveridad nivel) {
-    ofstream Log("Log.txt", ios::app); // Abrir el archivo de log en modo append
+    ofstream Log("Log.txt", ios::app); // Abrir el archivo de log en modo append, asi, si esta creado, puedo modificarlo
     if (!Log) {
-        throw runtime_error("No se pudo abrir el archivo");
+        throw runtime_error("No se pudo abrir el archivo"); // Ejemplo de excepcion capturada en runtime
         return;
     }
     Log << "[" << nivelToString(nivel) << "] <" << mensaje << ">" << endl; // Escribir el mensaje en el archivo de log
@@ -25,7 +25,7 @@ void logMessage(string mensaje, NivelSeveridad nivel) {
 
 // Función para registrar un mensaje de seguridad con un usuario
 void logMessage(string mensaje, string Usuario) {
-    ofstream Log("Log.txt", ios::app); // Abrir el archivo de log en modo append
+    ofstream Log("Log.txt", ios::app); 
     if (!Log) {
         throw runtime_error("No se pudo abrir el archivo");
         return;
@@ -53,7 +53,7 @@ int correr_log() {
         int valor;
         cin >> valor; // Leer el nivel de severidad
         cout << endl;
-        if (valor < 0 || valor > 5) {
+        if (valor < 0 || valor > 5) { 
             throw runtime_error("El valor ingresado no es valido"); // esto es uno de los ejemplos de errores capturados en runtime, todos siguen el mismo esquema
         }
         switch (valor) {
@@ -73,7 +73,7 @@ int correr_log() {
                     throw runtime_error("El mensaje de acceso no puede estar vacio");
                     return 0;
                 }
-                logMessage(Mensaje_acc, Usuario); // Registrar el mensaje de seguridad
+                logMessage(Mensaje_acc, Usuario); // recibis ambas variables desde a terminal, y se registra en el LOG
                 return 0;
             }
             default: { // Caso para los niveles de severidad defaults 
@@ -81,7 +81,7 @@ int correr_log() {
                 cin.ignore();
                 cout << "Ingrese el mensaje: ";
                 getline(cin, Mensaje);
-                NivelSeveridad nivel = static_cast<NivelSeveridad>(valor);
+                NivelSeveridad nivel = static_cast<NivelSeveridad>(valor); // se convierte la eleccion en un nivel de severidad
                 logMessage(Mensaje, nivel); // Registrar el mensaje con el nivel de severidad
             }
         }

@@ -18,7 +18,7 @@ vector<vector<int>> CrearMatriz(int Numero) {
 // Función para imprimir la matriz en orden inverso
 void ImprimirMatriz(vector<vector<int>> matriz, int Numero) {
     for (int i = Numero * Numero - 1; i >= 0; i--) { // Bucle para recorrer la matriz en orden inverso
-        cout << "Matriz[" << i / Numero << "][" << i % Numero << "] = " << matriz[i / Numero][i % Numero] << "\n"; 
+        cout << "Matriz[" << i / Numero + 1<< "][" << i % Numero + 1<< "] = " << matriz[i / Numero][i % Numero] << "\n"; 
     }
 }
 

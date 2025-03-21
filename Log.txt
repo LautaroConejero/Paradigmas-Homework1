@@ -1,21 +1,5 @@
-[WARNING] <Hola>
-[INFO] <k>
-[WARNING] <hola>
-[ERROR] <Division by zero error> Archivo: Ej_2/LOG.cpp Linea: 63
-[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 61
-[ERROR] <El mensaje de acceso no puede estar vacio> Archivo: Ej_2/LOG.cpp Linea: 81
-[WARNING] <hola>
-[] <hola>
-[ERROR] <HOLA>
-[] <as>
-[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
-[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
+[Security] <Gonzalo> es trolo
+[ERROR] <El mensaje de acceso no puede estar vacio> Archivo: Ej_2/LOG.cpp Linea: 90
+[Security] <Gonzalo> no entra en el archivo
 [DEBUG] <>
 [DEBUG] <>
-[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 78
-[DEBUG] <hola>
-[ERROR] <El valor ingresado no es valido> Archivo: Ej_2/LOG.cpp Linea: 84
-[Security] <Hola> no
-[UNKNOWN] <uit>
-[Security] <hola> no
-[WARNING] <gogog>

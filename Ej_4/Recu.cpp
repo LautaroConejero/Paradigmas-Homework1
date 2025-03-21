@@ -11,15 +11,15 @@ bool comp_recu_char(char* variable1, char* variable2) {
     return comp_recu_char(variable1 + 1, variable2 + 1); // Llamada recursiva con los siguientes caracteres
 }
 
-// Función constexpr para comparar dos cadenas de caracteres de forma recursiva
+// Misma función de comparación de cadenas de caracteres de forma recursiva, pero con la comparacion hecha en tiempo de compilación
 constexpr bool comp_recu_mod(const char* variable1, const char* variable2) {
-    if (*variable1 == '\0' && *variable2 == '\0') { // Si ambas cadenas han llegado al final
+    if (*variable1 == '\0' && *variable2 == '\0') { 
         return true;
     }
-    if (*variable1 != *variable2) { // Si los caracteres actuales no son iguales
+    if (*variable1 != *variable2) { 
         return false;
     }
-    return comp_recu_mod(variable1 + 1, variable2 + 1); // Llamada recursiva con los siguientes caracteres
+    return comp_recu_mod(variable1 + 1, variable2 + 1); 
 }
 
 // Función principal para correr el programa de comparación de cadenas
@@ -37,12 +37,13 @@ void correr_recu() {
     switch (Decision) {
         case 1: { // Comparar palabras ingresadas por el usuario
             cout << "Ingrese la primera palabra: " << endl;
-            char* Palabra1 = new char[100];
-            cin >> Palabra1;
+            char* Palabra1 = new char[100]; // creo un char* te tamano 100, asi dejo espacio para palabras largas
+            cin.ignore();
+            cin.getline(Palabra1, 100);
             cout << "Ingrese la segunda palabra: " << endl;
             char* Palabra2 = new char[100];
-            cin >> Palabra2;
-            auto start = chrono::high_resolution_clock::now();
+            cin.getline(Palabra2, 100);
+            auto start = chrono::high_resolution_clock::now(); // mido el tiempo que tarda en ejecutar el codigo
             bool Resultado = comp_recu_char(Palabra1, Palabra2);
             auto end = chrono::high_resolution_clock::now();
             if (Resultado) {
@@ -99,9 +100,11 @@ void correr_recu() {
                 }
             }
             suma_comp /= N;
-            cout << suma_comp << endl;
             cout << "El tiempo de compilacion con el 'tiempo de mas' [Mod] es: " << suma_comp << " nanosegundos" << endl;
             suma_comp -= suma_demas;
+            if (suma_comp < 0) {
+                suma_comp = suma_comp * -1;
+            }
             cout << "El tiempo de compilacion sin el 'tiempo de mas' [Mod] es: " << suma_comp << " nanosegundos" << endl;
             cout << endl;
 
